@@ -133,12 +133,26 @@ END
 ```python
 # Movie Theater Admission System
 
-age = int(input("Enter age: "))
+def yes_no_prompt(prompt):
+    while True:
+        answer = input(prompt).strip().lower()
+        if answer in {"yes", "y"}:
+            return True
+        if answer in {"no", "n"}:
+            return False
+        print("Please answer Yes or No.")
 
-adult = input("Accompanied by an adult? (Yes/No): ").lower()
-ticket = input("Has a valid ticket? (Yes/No): ").lower()
+while True:
+    age_input = input("Enter age: ").strip()
+    if age_input.isdigit():
+        age = int(age_input)
+        break
+    print("Please enter a valid whole number for age.")
 
-if (age >= 13 or adult == "yes") and ticket == "yes":
+adult = yes_no_prompt("Accompanied by an adult? (Yes/No): ")
+ticket = yes_no_prompt("Has a valid ticket? (Yes/No): ")
+
+if (age >= 13 or adult) and ticket:
     print("Allowed to Enter")
 else:
     print("Not Allowed to Enter")
