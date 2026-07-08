@@ -1,0 +1,16 @@
+Week 7 Documentation
+
+Bug found in main.py:
+The program did not validate invalid price and invalid quantity.
+It also did not handle error messages returned by calculate_total().
+
+Fix:
+- Added input validation in calculate_total().
+- Imported calculate_total correctly.
+- Displayed error messages when invalid input is entered.
+
+Testing:
+pytest
+
+Result:
+All tests passed successfully.
