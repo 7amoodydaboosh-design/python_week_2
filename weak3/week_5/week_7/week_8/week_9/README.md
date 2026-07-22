@@ -24,4 +24,4 @@ After that, enter the required information when prompted.
 
 Click the link below to watch the demonstration video.
 
-[▶ Demo Video](demo.mp4)
+![alt text](<Screen Recording 2026-07-22 115836.gif>)
